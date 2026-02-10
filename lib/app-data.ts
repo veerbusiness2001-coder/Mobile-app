@@ -1,0 +1,198 @@
+export type AppCategory = "Social" | "Productivity" | "Entertainment" | "Health" | "Finance" | "Education" | "Shopping" | "Utilities"
+
+export type AppStatus = "installed" | "wishlist" | "archived"
+
+export interface TrackedApp {
+  id: string
+  name: string
+  developer: string
+  category: AppCategory
+  status: AppStatus
+  rating: number
+  usageMinutes: number
+  icon: string
+  color: string
+  lastUsed: string
+  size: string
+}
+
+export const categories: AppCategory[] = [
+  "Social",
+  "Productivity",
+  "Entertainment",
+  "Health",
+  "Finance",
+  "Education",
+  "Shopping",
+  "Utilities",
+]
+
+export const categoryIcons: Record<AppCategory, string> = {
+  Social: "Users",
+  Productivity: "Zap",
+  Entertainment: "Play",
+  Health: "Heart",
+  Finance: "DollarSign",
+  Education: "BookOpen",
+  Shopping: "ShoppingBag",
+  Utilities: "Settings",
+}
+
+export const sampleApps: TrackedApp[] = [
+  {
+    id: "1",
+    name: "Instagram",
+    developer: "Meta",
+    category: "Social",
+    status: "installed",
+    rating: 4.5,
+    usageMinutes: 145,
+    icon: "Camera",
+    color: "bg-pink-500",
+    lastUsed: "2 min ago",
+    size: "234 MB",
+  },
+  {
+    id: "2",
+    name: "Notion",
+    developer: "Notion Labs",
+    category: "Productivity",
+    status: "installed",
+    rating: 4.8,
+    usageMinutes: 210,
+    icon: "FileText",
+    color: "bg-foreground",
+    lastUsed: "15 min ago",
+    size: "128 MB",
+  },
+  {
+    id: "3",
+    name: "Spotify",
+    developer: "Spotify AB",
+    category: "Entertainment",
+    status: "installed",
+    rating: 4.7,
+    usageMinutes: 320,
+    icon: "Music",
+    color: "bg-emerald-500",
+    lastUsed: "1 hr ago",
+    size: "356 MB",
+  },
+  {
+    id: "4",
+    name: "Duolingo",
+    developer: "Duolingo Inc",
+    category: "Education",
+    status: "installed",
+    rating: 4.6,
+    usageMinutes: 45,
+    icon: "BookOpen",
+    color: "bg-green-500",
+    lastUsed: "3 hr ago",
+    size: "198 MB",
+  },
+  {
+    id: "5",
+    name: "Slack",
+    developer: "Salesforce",
+    category: "Productivity",
+    status: "installed",
+    rating: 4.3,
+    usageMinutes: 180,
+    icon: "Hash",
+    color: "bg-sky-500",
+    lastUsed: "30 min ago",
+    size: "276 MB",
+  },
+  {
+    id: "6",
+    name: "YouTube",
+    developer: "Google LLC",
+    category: "Entertainment",
+    status: "installed",
+    rating: 4.4,
+    usageMinutes: 280,
+    icon: "Play",
+    color: "bg-red-500",
+    lastUsed: "5 min ago",
+    size: "412 MB",
+  },
+  {
+    id: "7",
+    name: "Headspace",
+    developer: "Headspace Inc",
+    category: "Health",
+    status: "wishlist",
+    rating: 4.9,
+    usageMinutes: 0,
+    icon: "Heart",
+    color: "bg-orange-400",
+    lastUsed: "Never",
+    size: "156 MB",
+  },
+  {
+    id: "8",
+    name: "Robinhood",
+    developer: "Robinhood Markets",
+    category: "Finance",
+    status: "installed",
+    rating: 4.1,
+    usageMinutes: 35,
+    icon: "TrendingUp",
+    color: "bg-emerald-400",
+    lastUsed: "1 day ago",
+    size: "89 MB",
+  },
+  {
+    id: "9",
+    name: "Figma",
+    developer: "Figma Inc",
+    category: "Productivity",
+    status: "installed",
+    rating: 4.7,
+    usageMinutes: 95,
+    icon: "Pen",
+    color: "bg-orange-500",
+    lastUsed: "2 hr ago",
+    size: "167 MB",
+  },
+  {
+    id: "10",
+    name: "Amazon",
+    developer: "Amazon.com",
+    category: "Shopping",
+    status: "installed",
+    rating: 4.2,
+    usageMinutes: 55,
+    icon: "ShoppingBag",
+    color: "bg-amber-500",
+    lastUsed: "5 hr ago",
+    size: "312 MB",
+  },
+  {
+    id: "11",
+    name: "1Password",
+    developer: "AgileBits",
+    category: "Utilities",
+    status: "wishlist",
+    rating: 4.8,
+    usageMinutes: 0,
+    icon: "Lock",
+    color: "bg-blue-500",
+    lastUsed: "Never",
+    size: "102 MB",
+  },
+  {
+    id: "12",
+    name: "Twitter",
+    developer: "X Corp",
+    category: "Social",
+    status: "archived",
+    rating: 3.8,
+    usageMinutes: 420,
+    icon: "AtSign",
+    color: "bg-sky-400",
+    lastUsed: "2 weeks ago",
+    size: "287 MB",
+  },
+]
