@@ -8,9 +8,10 @@ interface AppListProps {
   apps: TrackedApp[]
   onStatusChange: (id: string, status: AppStatus) => void
   onDelete: (id: string) => void
+  onLike: (id: string) => void
 }
 
-export function AppList({ apps, onStatusChange, onDelete }: AppListProps) {
+export function AppList({ apps, onStatusChange, onDelete, onLike }: AppListProps) {
   if (apps.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-16 px-5 text-center">
@@ -26,7 +27,7 @@ export function AppList({ apps, onStatusChange, onDelete }: AppListProps) {
   return (
     <div className="px-5 pb-28 flex flex-col gap-3">
       {apps.map((app) => (
-        <AppCard key={app.id} app={app} onStatusChange={onStatusChange} onDelete={onDelete} />
+        <AppCard key={app.id} app={app} onStatusChange={onStatusChange} onDelete={onDelete} onLike={onLike} />
       ))}
     </div>
   )

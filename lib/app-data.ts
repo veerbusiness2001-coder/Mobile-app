@@ -14,6 +14,7 @@ export interface TrackedApp {
   color: string
   lastUsed: string
   size: string
+  liked: boolean
 }
 
 export const categories: AppCategory[] = [
@@ -51,6 +52,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-pink-500",
     lastUsed: "2 min ago",
     size: "234 MB",
+    liked: false,
   },
   {
     id: "2",
@@ -64,6 +66,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-foreground",
     lastUsed: "15 min ago",
     size: "128 MB",
+    liked: false,
   },
   {
     id: "3",
@@ -77,6 +80,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-emerald-500",
     lastUsed: "1 hr ago",
     size: "356 MB",
+    liked: false,
   },
   {
     id: "4",
@@ -90,6 +94,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-green-500",
     lastUsed: "3 hr ago",
     size: "198 MB",
+    liked: false,
   },
   {
     id: "5",
@@ -103,6 +108,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-sky-500",
     lastUsed: "30 min ago",
     size: "276 MB",
+    liked: false,
   },
   {
     id: "6",
@@ -116,6 +122,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-red-500",
     lastUsed: "5 min ago",
     size: "412 MB",
+    liked: false,
   },
   {
     id: "7",
@@ -129,6 +136,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-orange-400",
     lastUsed: "Never",
     size: "156 MB",
+    liked: false,
   },
   {
     id: "8",
@@ -142,6 +150,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-emerald-400",
     lastUsed: "1 day ago",
     size: "89 MB",
+    liked: false,
   },
   {
     id: "9",
@@ -155,6 +164,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-orange-500",
     lastUsed: "2 hr ago",
     size: "167 MB",
+    liked: false,
   },
   {
     id: "10",
@@ -168,6 +178,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-amber-500",
     lastUsed: "5 hr ago",
     size: "312 MB",
+    liked: false,
   },
   {
     id: "11",
@@ -181,6 +192,7 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-blue-500",
     lastUsed: "Never",
     size: "102 MB",
+    liked: false,
   },
   {
     id: "12",
@@ -194,5 +206,6 @@ export const sampleApps: TrackedApp[] = [
     color: "bg-sky-400",
     lastUsed: "2 weeks ago",
     size: "287 MB",
+    liked: false,
   },
 ]

@@ -64,6 +64,10 @@ export default function Page() {
     setApps((prev) => prev.filter((app) => app.id !== id))
   }
 
+  const handleLike = (id: string) => {
+    setApps((prev) => prev.map((app) => (app.id === id ? { ...app, liked: !app.liked } : app)))
+  }
+
   const handleAddApp = (app: TrackedApp) => {
     setApps((prev) => [app, ...prev])
   }
@@ -134,7 +138,7 @@ export default function Page() {
             <h2 className="text-sm font-semibold text-foreground">Your Apps</h2>
             <span className="text-xs text-muted-foreground">{filteredApps.length} apps</span>
           </div>
-          <AppList apps={filteredApps} onStatusChange={handleStatusChange} onDelete={handleDelete} />
+          <AppList apps={filteredApps} onStatusChange={handleStatusChange} onDelete={handleDelete} onLike={handleLike} />
         </>
       )}
 
@@ -146,7 +150,7 @@ export default function Page() {
             <h2 className="text-lg font-bold text-foreground">Wishlist</h2>
             <p className="text-xs text-muted-foreground mt-0.5">Apps you want to try</p>
           </div>
-          <AppList apps={filteredApps} onStatusChange={handleStatusChange} onDelete={handleDelete} />
+          <AppList apps={filteredApps} onStatusChange={handleStatusChange} onDelete={handleDelete} onLike={handleLike} />
         </>
       )}
 

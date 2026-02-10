@@ -51,9 +51,10 @@ interface AppCardProps {
   app: TrackedApp
   onStatusChange: (id: string, status: AppStatus) => void
   onDelete: (id: string) => void
+  onLike: (id: string) => void
 }
 
-export function AppCard({ app, onStatusChange, onDelete }: AppCardProps) {
+export function AppCard({ app, onStatusChange, onDelete, onLike }: AppCardProps) {
   const Icon = iconMap[app.icon] || FileText
   const hours = Math.floor(app.usageMinutes / 60)
   const minutes = app.usageMinutes % 60
@@ -143,6 +144,15 @@ export function AppCard({ app, onStatusChange, onDelete }: AppCardProps) {
           >
             {app.status === "installed" ? "Installed" : app.status === "wishlist" ? "Wishlist" : "Archived"}
           </Badge>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => onLike(app.id)}
+            className="h-6 w-6 rounded-full ml-auto text-muted-foreground hover:text-primary shrink-0"
+            aria-label={app.liked ? "Unlike" : "Like"}
+          >
+            <Heart className={`h-4 w-4 ${app.liked ? "fill-primary text-primary" : ""}`} />
+          </Button>
         </div>
       </div>
     </div>
